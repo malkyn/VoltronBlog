@@ -113,7 +113,7 @@ namespace Voltron_BackEnd.Services
 
             try
             {
-                Personagem personagem = await _context.Personagens.FirstOrDefaultAsync(x => x.ID == novoPersonagem.ID);
+                Personagem? personagem = await _context.Personagens.FirstOrDefaultAsync(x => x.ID == novoPersonagem.ID);
                 if (personagem == null)
                 {
                     response.Dados = null;
