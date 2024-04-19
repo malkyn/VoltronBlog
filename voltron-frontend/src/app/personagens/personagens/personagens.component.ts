@@ -30,7 +30,7 @@ export class PersonagensComponent implements OnInit {
           console.log(this.personagens);
         } else {
           console.error('Erro ao obter personagens:', response.mensagem);
-          this.personagens = []; // Define como uma matriz vazia para evitar erros
+          this.personagens = [];
         }
       },
       (error) => {
