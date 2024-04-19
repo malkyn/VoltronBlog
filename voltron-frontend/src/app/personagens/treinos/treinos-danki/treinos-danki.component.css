@@ -1,0 +1,41 @@
+.body{
+  height: 100%
+}
+
+.bg{
+  /* width: 100%;
+  margin: 0 auto;
+  height: 50vh;
+  background-color: red;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("/assets/images/voltronseason21.jpeg");
+  background-repeat: no-repeat; */
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center ; Primeira posição é largura, segunda é altura eixo X e depois eixo Y */
+}
+
+.box{
+  width: 100%;
+  margin: 80px auto;
+  text-align: center;
+  background-color: rgb(224, 217, 217);
+}
+
+.item{
+  width: 33.33%;
+  margin-right: -4px;
+  display: inline-block;
+}
+.item img{
+  width: 26%;
+}
+.item p{
+  display: inline-block;
+  text-align: left;
+}
+
+.last{
+  margin-right: 0;
+}
