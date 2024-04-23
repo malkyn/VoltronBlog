@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NameDialogComponent } from './Views/name-dialog/name-dialog.component';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -26,6 +26,7 @@ import { NameDialogComponent } from './Views/name-dialog/name-dialog.component';
   ],
   imports: [
     CommonModule,
+    MatSnackBarModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

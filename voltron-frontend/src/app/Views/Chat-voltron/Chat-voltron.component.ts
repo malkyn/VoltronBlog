@@ -3,6 +3,8 @@ import { FormControl } from '@angular/forms';
 import * as signalR from '@microsoft/signalr';
 import { NameDialogComponent } from '../name-dialog/name-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { environment } from 'src/environments/environment.development';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 interface Message{
   userName: string,
@@ -16,21 +18,21 @@ interface Message{
 })
 export class ChatVoltronComponent implements OnInit {
   messages: Message[] = []
-
+  baseUrl = `${environment.baseUrl}`
   connection = new signalR.HubConnectionBuilder()
-  .withUrl("https://localhost:44307/MyHub")
+  .withUrl(`${this.baseUrl + 'MyHub'}`)
   .build();
 
 
   messageControl = new FormControl('');
-  userName = 'Vini'
-  constructor(public dialog: MatDialog) {
+  userName!: string;
+  constructor(
+    public dialog: MatDialog,
+    public snackBar: MatSnackBar) {
     this.openDialog();
    }
 
   ngOnInit() {
-    console.log(this.messages)
-
   }
 
   openDialog(){
@@ -43,6 +45,17 @@ export class ChatVoltronComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result =>{
       this.userName = result;
       this.startConnection();
+      this.openSnackBar(result);
+    })
+  }
+
+  openSnackBar(userName: string){
+    debugger
+    const message = userName == this.userName ? "Você entrou na sala" : `${userName} acabou de entrar`;
+    this.snackBar.open(message, 'Fechar', {
+      duration: 5000,
+      horizontalPosition: 'right',
+      verticalPosition: 'top'
     })
   }
 
@@ -53,8 +66,21 @@ export class ChatVoltronComponent implements OnInit {
         userName: userName
       });
     });
-    this.connection.start();
+
+    this.connection.on("newUser", (userName: string) =>{
+      this.openSnackBar(userName);
+    });
+
+    this.connection.on("previousMessages", (messages: Message[]) =>{
+      this.messages = messages;
+    });
+
+    this.connection.start()
+    .then(() =>{
+      this.connection.send("newUser", this.userName, this.connection.connectionId);
+    });
   }
+
   sendMessage(){
     this.connection.send("newMessage", this.userName, this.messageControl.value)
     .then(()=>
