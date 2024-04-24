@@ -1,0 +1,73 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 1;
+}
+mat-sidenav {
+  width: 90px; /* Adjust width as needed */
+  background-color: #f0f0f0; /* Optional background color */
+}
+
+body{
+  background-color: black;
+}
+nav.menu-lateral{
+  width: 90px;
+  height: 100%;
+  background-color: rgb(28, 30, 34);
+  padding: 40px 0 40px 1%;
+  box-shadow: 5px 0 0  rgb(72, 55, 80);
+  position:fixed;
+  top:0;
+  bottom: 0;
+  transition: .4s;
+  overflow: hidden;
+}
+
+nav.menu-lateral:hover{
+  width: 300px;
+
+}
+
+.btn-expandir{
+  width: 100%;
+  padding-left: 10px;
+}
+.btn-expandir > i{
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+ul{
+  height: 100%;
+  list-style-type: none;
+}
+
+ul li.item-menu{
+  transition: .3s;
+}
+
+ul li.item-menu:hover{
+  background: rgb(72, 55, 80);
+}
+
+ul li.item-menu a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px 4%;
+  display: flex;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+
+ul li.item-menu a .txt-link{
+  margin-left: 35px;
+}
+
+ul li.item-menu a .icon > i{
+  font-size: 30px;
+  margin-left: 10px;
+}
