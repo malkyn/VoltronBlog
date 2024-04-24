@@ -15,14 +15,17 @@ import { CommonModule } from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NameDialogComponent } from './Views/name-dialog/name-dialog.component';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
+import { NavBarComponent } from './nav/nav-bar/nav-bar.component';
+import * as Chart from 'chart.js'
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonagensComponent,
     ChatVoltronComponent,
-    NameDialogComponent
+    NameDialogComponent,
+    NavBarComponent
   ],
   imports: [
     CommonModule,

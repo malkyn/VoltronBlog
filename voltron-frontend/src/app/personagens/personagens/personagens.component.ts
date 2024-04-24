@@ -16,10 +16,10 @@ export class PersonagensComponent implements OnInit {
   imagem!: string | null
   constructor(private personagemService: PersonagemService) { }
 
+
   ngOnInit() {
     this.carregarPersonagens();
   }
-
 
 
   carregarPersonagens() {

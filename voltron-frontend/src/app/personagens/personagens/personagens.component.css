@@ -43,19 +43,8 @@
   opacity:0;
 }
 
-.tracinho{
-  position: relative;
-  left: 8px;
-  /* bottom: 40px; */
-  background-color: black;
-  margin-top: 7px;
-  width: 25px;
-  height: 3px;
-  border-radius: 3px;
-}
 
 .box{
-  position: inherit;
   width: 100%;
   margin: 0 auto;
   height: 100vh;
@@ -63,6 +52,7 @@
   background-size: cover;
   background-image: url("../../../assets/images/voltronseason21.jpeg");
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .box2{
@@ -80,6 +70,7 @@
 
 .lugar-cards{
   margin: 0 auto;
+  margin-left: 300px;
   height: 500px;
   position: relative;
   top: 165px;
@@ -105,7 +96,7 @@
   position: inherit;
   width: 210px;
   height: 300px;
-  /* margin: 0 20px; */
+  margin: 0 20px;
 
   top:80px;
   padding: 20px 10px 5px 10px;
@@ -137,3 +128,4 @@
   background-color: #f2e1ac;
   border: 5px solid #F2C46D;
 }
+
