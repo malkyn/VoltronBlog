@@ -18,6 +18,7 @@ import { NameDialogComponent } from './Views/name-dialog/name-dialog.component';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { NavBarComponent } from './nav/nav-bar/nav-bar.component';
 import * as Chart from 'chart.js'
+import { LoginComponent } from './Views/login/login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import * as Chart from 'chart.js'
     PersonagensComponent,
     ChatVoltronComponent,
     NameDialogComponent,
-    NavBarComponent
+    NavBarComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
