@@ -83,13 +83,18 @@ ul li.item-menu a .icon > i{
 
 
 .btn-contato button{
+  border-radius: 3px;
   width: 120px;
   height: 40px;
   border: 0;
-  background-color: rgb(110, 139, 157);
+  background-color: rgb(55, 78, 120);
   color: #fff;
   cursor: pointer;
   transition:  .2;
+}
+
+.btn-contato button:hover{
+  background-color: rgb(44, 66, 107);
 }
 
 .container{
