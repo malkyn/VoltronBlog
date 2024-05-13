@@ -34,7 +34,7 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "src/assets/javascripts/slide.js"
+              "src/assets/javascripts/menu.js"
             ]
           },
           "configurations": {
