@@ -1,20 +1,20 @@
-*{
+/* *{
   margin:0;
   padding: 0;
   box-sizing: border-box;
   z-index: 1;
 }
 mat-sidenav {
-  width: 90px; /* Adjust width as needed */
-  background-color: #f0f0f0; /* Optional background color */
+  width: 90px;
+  background-color: #f0f0f0;
 }
 
 body{
   background-color: black;
 }
 nav.menu-lateral{
-  width: 90px;
-  height: 100%;
+  width: 100%;
+  height: 70px;
   background-color: rgb(28, 30, 34);
   padding: 40px 0 40px 1%;
   box-shadow: 5px 0 0  rgb(72, 55, 80);
@@ -26,8 +26,7 @@ nav.menu-lateral{
 }
 
 nav.menu-lateral:hover{
-  width: 300px;
-
+  height: 100px;
 }
 
 .btn-expandir{
@@ -53,12 +52,15 @@ ul li.item-menu:hover{
   background: rgb(72, 55, 80);
 }
 
+
 ul li.item-menu a{
+  text-align: center;
+  float: left;
   color: white;
   text-decoration: none;
   font-size: 20px;
-  padding: 20px 4%;
-  display: flex;
+  padding: 0px 4%;
+  display: block;
   margin-bottom: 20px;
   line-height: 40px;
 }
@@ -70,4 +72,62 @@ ul li.item-menu a .txt-link{
 ul li.item-menu a .icon > i{
   font-size: 30px;
   margin-left: 10px;
+} */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
+
+
+.btn-contato button{
+  width: 120px;
+  height: 40px;
+  border: 0;
+  background-color: rgb(110, 139, 157);
+  color: #fff;
+  cursor: pointer;
+  transition:  .2;
+}
+
+.container{
+  max-width: 1200px;
+  margin: auto;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /*Garante que os elementos fiquem bem divididos nas extremidades*/
+}
+
+header{
+  width: 100%;
+  padding: 60px 4%;
+  position: fixed;
+  top:0;
+  left:0;
+}
+
+header i{
+  font-size: 30px;
+  color: white;
+}
+
+header ul{
+  list-style-type: none;
+}
+
+header ul li{
+  display: inline-block;
+  margin: 0 40px;
+}
+
+header ul li a{
+  font-size: 1.2em;
+  color: #fff;
+  text-decoration: none;
+}
+
