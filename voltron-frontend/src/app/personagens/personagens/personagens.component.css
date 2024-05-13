@@ -1,5 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-.card{
+
+/* html{
+  height: 500vh;
+} */
+/* .card{
   width: 100px;
   height: 250px;
   margin: 20px 20px;
@@ -127,5 +137,28 @@
 .card-hunk {
   background-color: #f2e1ac;
   border: 5px solid #F2C46D;
+} */
+
+.banner{
+  height: 100vh;
+  background-image:url("../../../assets/images/wp2644682.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner h1{
+  font-size: 5em;
+  color: rgb(255, 255, 255);
+}
+
+.banner h1 a{
+  text-decoration: none;
+  color: rgb(187, 145, 187);
+  cursor: pointer;
 }
 

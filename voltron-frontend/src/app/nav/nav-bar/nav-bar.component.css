@@ -1,73 +1,75 @@
 *{
-  margin:0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  z-index: 1;
-}
-mat-sidenav {
-  width: 90px; /* Adjust width as needed */
-  background-color: #f0f0f0; /* Optional background color */
+  font-family: 'Poppins', sans-serif;
 }
 
-body{
-  background-color: black;
-}
-nav.menu-lateral{
-  width: 90px;
-  height: 100%;
-  background-color: rgb(28, 30, 34);
-  padding: 40px 0 40px 1%;
-  box-shadow: 5px 0 0  rgb(72, 55, 80);
-  position:fixed;
-  top:0;
-  bottom: 0;
-  transition: .4s;
-  overflow: hidden;
-}
 
-nav.menu-lateral:hover{
-  width: 300px;
-
-}
-
-.btn-expandir{
-  width: 100%;
-  padding-left: 10px;
-}
-.btn-expandir > i{
-  color: white;
-  font-size: 30px;
+.btn-contato button{
+  border-radius: 3px;
+  width: 120px;
+  height: 40px;
+  border: 0;
+  background-color: rgb(55, 78, 120);
+  color: #fff;
   cursor: pointer;
+  transition:  .2;
 }
 
-ul{
-  height: 100%;
+.btn-contato button:hover{
+  background-color: rgb(44, 66, 107);
+}
+
+.container{
+  max-width: 1200px;
+  margin: auto;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /*Garante que os elementos fiquem bem divididos nas extremidades*/
+}
+
+
+header i{
+  font-size: 30px;
+  color: white;
+}
+
+header ul{
   list-style-type: none;
 }
 
-ul li.item-menu{
-  transition: .3s;
+header ul li{
+  display: inline-block;
+  margin: 0 40px;
 }
 
-ul li.item-menu:hover{
-  background: rgb(72, 55, 80);
-}
-
-ul li.item-menu a{
-  color: white;
+header ul li a{
+  font-size: 1.2em;
+  color: #fff;
   text-decoration: none;
-  font-size: 20px;
+}
+
+header{
+  width: 100%;
+  padding: 60px 4%;
+  position: fixed;
+  top:0;
+  left:0;
+  transition: .7s;
+}
+
+header.rolagem{
+  background-color: #ffffff;
   padding: 20px 4%;
-  display: flex;
-  margin-bottom: 20px;
-  line-height: 40px;
 }
 
-ul li.item-menu a .txt-link{
-  margin-left: 35px;
+header.rolagem ul li a, header.rolagem i{
+  color:#1E2D40;
 }
 
-ul li.item-menu a .icon > i{
-  font-size: 30px;
-  margin-left: 10px;
-}
+
+

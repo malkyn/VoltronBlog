@@ -1,13 +1,4 @@
-<!-- <div class="card">
-  <h1 >Lance</h1>
-  <div class="lance-img">
-    <img src="assets\images\lance.jpg">
-  </div>
-  <img>
-  <p>Olá</p>
-</div> -->
-
- <div class="box">
+<div class="box">
       <div class="lugar-cards">
         <div *ngFor="let personagem of personagens" class="card" [ngClass]="'card-' + personagem.nome?.toLowerCase()">
           <div class="image">
@@ -18,4 +9,10 @@
         <div style="clear: both;"></div>
       </div>
 </div>
+<html>
+  <section class="banner">
+    <h1>OS <a routerLink="chat" target="_blank">PALADINOS</a> DE VOLTRON</h1>
+  </section>
+
+</html>
 
