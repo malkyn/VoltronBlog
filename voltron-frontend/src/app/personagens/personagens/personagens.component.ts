@@ -16,6 +16,12 @@ export class PersonagensComponent implements OnInit {
   imagem!: string | null
   constructor(private personagemService: PersonagemService) { }
 
+  scrollToPosition(position: number): void {
+    window.scrollTo({
+      top: position,
+      behavior: 'smooth',
+    });
+  }
 
   ngOnInit() {
     this.carregarPersonagens();
