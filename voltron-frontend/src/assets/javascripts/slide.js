@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   setInterval(function() {
     proximaTag();
-  }, 2000);
+  }, 4000);
 
   function proximaTag() {
     cont++;
